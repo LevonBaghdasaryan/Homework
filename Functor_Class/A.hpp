@@ -1,5 +1,5 @@
-#ifndef A_HPP
-#define A_HPP
+#ifndef __A_HPP__
+#define __A_HPP__
 
 #include <iostream>
 
@@ -10,4 +10,4 @@ class A {
         double f(const A& functor);
 };
 
-#endif // A_HPP
+#endif // __A_HPP__
