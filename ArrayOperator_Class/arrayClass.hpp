@@ -6,12 +6,16 @@
 class ArrayClass {
     public:
         ArrayClass(const int& size);
+        ArrayClass(const ArrayClass& other);
+        ArrayClass& operator=(const ArrayClass& other);
+        int& operator[](int index);
+
         friend std::istream& operator>>(std::istream& is, ArrayClass& a);
         friend std::ostream& operator<<(std::ostream& os, ArrayClass& a);
-        int& operator[](int index);
+
         virtual ~ArrayClass();
     private:
-        int *_date;
+        int *_data;
         int _size;
 };
 
