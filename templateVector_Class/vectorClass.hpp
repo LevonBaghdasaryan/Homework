@@ -11,6 +11,11 @@ class Vector {
         Vector(std::size_t size);
         void inputVector();
         void printVector() const;
+
+        void pop_back();
+        void pop_front();
+        void push_front(const T& value);
+        void insert(std::size_t index, const T& value);
     private:
         std::vector<T> _data;
         size_t _size;    

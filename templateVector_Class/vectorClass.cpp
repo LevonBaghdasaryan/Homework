@@ -24,6 +24,32 @@ void Vector<T>::inputVector() {
     std::cout << std::endl;
 }
 
+template <typename T>
+void Vector<T>::pop_back() {
+    if(!_data.empty()) {
+        _data.pop_back();
+    }
+}
+
+template <typename T>
+void Vector<T>::pop_front() {
+    if(!_data.empty()) {
+        _data.erase(_data.begin());
+    }
+}
+
+template <typename T>
+void Vector<T>::push_front(const T& value) {
+    _data.insert(_data.begin(), value);
+}
+
+template <typename T>
+void Vector<T>::insert(std::size_t index, const T& value) {
+    if(index <= _data.size()) {
+        _data.insert(_data.begin() + index, value);
+    }
+}
+
 template class Vector<int>;
 template class Vector<double>;
 template class Vector<std::string>;
